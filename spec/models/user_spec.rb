@@ -8,5 +8,10 @@ RSpec.describe User, type: :model do
       user.name = nil
       expect(user).to_not be_valid
     end
+    let(:user) { FactoryBot.build(:user) }
+    it "should have a title" do
+      user.email = nil
+      expect(user).to_not be_valid
+    end
   end
 end
