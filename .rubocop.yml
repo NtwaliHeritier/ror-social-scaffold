@@ -59,3 +59,5 @@ Style/HashTransformValues:
   Enabled: false
 Layout/LineLength:
   Enabled: false
+Layout/EndOfLine:
+  Enabled: false
