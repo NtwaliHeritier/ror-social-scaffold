@@ -22,7 +22,7 @@ class User < ApplicationRecord
   has_many :received_invitations, foreign_key: :invitee_id, class_name: "Invitation"
   has_many :invitors, through: :received_invitations
 
-  # def request_sent(invitor, invitee) 
+  # def request_sent(invitor, invitee)
   #   User.where("invitor_id = ? and invitee_id = ?", invitor, invitee)
   # end
 end

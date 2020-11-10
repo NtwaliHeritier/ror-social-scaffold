@@ -1,0 +1,15 @@
+<%if @status=="following"%>
+Following
+<ul>
+<%@friendships.each do |friendship|%>
+<li><%=friendship.followee.name%></li>
+<%end%>
+</ul>
+<%else%>
+Follower
+<ul>
+<%@friendships.each do |friendship|%>
+<li><%=friendship.follower.name%></li>
+<%end%>
+</ul>
+<%end%>
