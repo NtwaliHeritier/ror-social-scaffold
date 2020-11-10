@@ -1,93 +1,54 @@
-# Scaffold for social media app with Ruby on Rails
+# Project :  social media
+In this project we practiced building associations between models.
 
-> This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
+## Build-With
 
-## Built With
-
-- Ruby v2.7.0
-- Ruby on Rails v5.2.4
-
-## Live Demo
-
-TBA
-
+- Ruby -v 2.7.2
+- Rails -v 6.0.3.4
+- Postgresql
+- VScode
 
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps.
-
 ### Prerequisites
 
-Ruby: 2.6.3
-Rails: 5.2.3
-Postgres: >=9.5
+To get this project up and running locally, you must already have ruby and necessary gems installed on your computer
 
-### Setup
+**To get this project set up on your local machine, follow these simple steps:**
 
-Instal gems with:
-
-```
-bundle install
-```
-
-Setup database with:
-
-```
-   rails db:create
-   rails db:migrate
-```
-
-### Github Actions
-
-To make sure the linters' checks using Github Actions work properly, you should follow the next steps:
-
-1. On your recently forked repo, enable the GitHub Actions in the Actions tab.
-2. Create the `feature/branch` and push.
-3. Start working on your milestone as usual.
-4. Open a PR from the `feature/branch` when your work is done.
+1. Open Terminal.
+2. Navigate to your desired location to download the contents of this repository.
+3. Copy and paste the following code into the Terminal: git clone https://github.com/NtwaliHeritier/ror-social-scaffold
+4. Run ```cd ror-social-scaffold```.
+5. Run ```bundle install``` to get the necesary gems.
+6. Run `rails db:create`.
+6. Run `rails db:migrate`.
+7. Run `rails s`
 
 
-### Usage
+## Author Details::
 
-Start server with:
+👤 **Lamia Sristy**
 
-```
-    rails server
-```
+- Github: [@LamiaSristy](https://github.com/LamiaSristy)
+- Linkedin: [@LamiaSristy](https://www.linkedin.com/in/lamia-hemayet-sristy/)
+- E-mail: <a href="mailto:lamiasristy@gmail.com?subject=Hello Lamia!">Email</a>  
+- Twitter: [@LamiaSristy](https://twitter.com/lsristy1)
 
-Open `http://localhost:3000/` in your browser.
+👤 **NTWALI Heritier**
+- Github: [@NtwaliHeritier](https://github.com/NtwaliHeritier)
+- Linkedin: [@NtwaliHeritier](https://www.linkedin.com/in/ntwaliheritier/)
+- E-mail: <a href="mailto:ntwalihatsor78.nh@gmail.com?subject=Hello Heritier!">Email</a>  
+- Twitter: [@NtwaliHeritier](https://twitter.com/NtwaliHeritier)
 
-### Run tests
-
-```
-    rpsec --format documentation
-```
-
-> Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
-
-### Deployment
-
-TBA
-
-## Authors
-
-TBA
-
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!
-
-Feel free to check the [issues page](issues/).
 
 ## Show your support
 
-Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-TBA
+Give ⭐ Star me on GitHub — it helps!
 
 ## 📝 License
 
-TBA
+This project is [MIT](lic.url) licensed.   
+
+
 
