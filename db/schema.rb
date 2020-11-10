@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_04_165841) do
+ActiveRecord::Schema.define(version: 2020_11_10_102818) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,26 @@ ActiveRecord::Schema.define(version: 2020_02_04_165841) do
     t.datetime "updated_at", null: false
     t.index ["post_id"], name: "index_comments_on_post_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "friendships", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "follower_id"
+    t.bigint "followee_id"
+    t.boolean "status"
+    t.index ["followee_id"], name: "index_friendships_on_followee_id"
+    t.index ["follower_id"], name: "index_friendships_on_follower_id"
+  end
+
+  create_table "invitations", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "invitor_id"
+    t.bigint "invitee_id"
+    t.boolean "status", default: true
+    t.index ["invitee_id"], name: "index_invitations_on_invitee_id"
+    t.index ["invitor_id"], name: "index_invitations_on_invitor_id"
   end
 
   create_table "likes", force: :cascade do |t|
@@ -54,4 +74,8 @@ ActiveRecord::Schema.define(version: 2020_02_04_165841) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "friendships", "users", column: "followee_id"
+  add_foreign_key "friendships", "users", column: "follower_id"
+  add_foreign_key "invitations", "users", column: "invitee_id"
+  add_foreign_key "invitations", "users", column: "invitor_id"
 end
