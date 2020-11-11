@@ -1,14 +1,7 @@
 class FriendshipsController < ApplicationController
   def create
-    status = false
-    @friendship = Friendship.new
-    @friendship.follower_id = params[:invitor_id]
-    @friendship.followee_id = current_user.id
-    status = true if params[:commit] == "Accept"
-    @friendship.status = status
-    @friendship.save
-    @invitation = Invitation.where("invitor_id = ? and invitee_id = ?", params[:invitor_id], current_user.id).first
-    @invitation.update(status: false)
+    following(params[:invitor_id], current_user.id)
+    following(current_user.id, params[:invitor_id])
     redirect_to root_path
   end
 
@@ -22,5 +15,19 @@ class FriendshipsController < ApplicationController
       @friendships = Friendship.accepted_request(params[:user_id])
       @status = "followers"
     end
+  end
+
+  private
+
+  def following(arg1, arg2)
+    status = false
+    friendship = Friendship.new
+    friendship.follower_id = arg1
+    friendship.followee_id = arg2
+    status = true if params[:commit] == "Accept"
+    friendship.status = status
+    friendship.save
+    invitation = Invitation.where("invitor_id = ? and invitee_id = ?", arg1, arg2).first
+    invitation&.update(status: false)
   end
 end
