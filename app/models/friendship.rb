@@ -13,13 +13,16 @@ class Friendship < ApplicationRecord
   def self.mutual_friends(user1, user2)
     friends1 = Friendship.where("follower_id=?", user1.id).pluck(:followee_id)
     friends2 = Friendship.where("follower_id=?", user2.id).pluck(:followee_id)
-    common_friends = friends1.select { |friend| friends2.include? friend }
-    arr = []
-    i = 0
-    while i < common_friends.length
-      arr.push(User.find(common_friends[i]))
-      i += 1
-    end
-    arr
+    # common_friends = friends1.select { |friend| friends2.include? friend }
+    # arr = []
+    # i = 0
+    # while i < common_friends.length
+    #   arr.push(User.find(common_friends[i]))
+    #   i += 1
+    # end
+    # arr
+    User.where( "id in (?)",
+    friends1.select { |friend| friends2.include? friend }
+    )
   end
 end
