@@ -13,7 +13,7 @@ class Friendship < ApplicationRecord
   def self.mutual_friends(user1, user2)
     friends1 = Friendship.where("follower_id=?", user1.id).pluck(:followee_id)
     friends2 = Friendship.where("follower_id=?", user2.id).pluck(:followee_id)
-    User.where( "id in (?)", friends1.select { |friend| friends2.include? friend })
+    User.where("id in (?)", friends1.select { |friend| friends2.include? friend })
   end
 
   def self.friendship_exists?(follower_id, followee_id)
