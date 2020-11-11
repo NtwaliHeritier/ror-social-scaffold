@@ -29,6 +29,5 @@ class FriendshipsController < ApplicationController
     friendship.save
     invitation = Invitation.where("invitor_id = ? and invitee_id = ?", arg1, arg2).first
     invitation&.update(status: false)
-    # invitation.update(status: false) unless invitation.nil?
   end
 end
