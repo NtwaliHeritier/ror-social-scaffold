@@ -12,7 +12,7 @@ In this project we practiced building associations between models.
 
 ### Prerequisites
 
-To get this project up and running locally, you must already have postgresql, ruby and necessary gems installed on your computer
+To get this project up and running locally, you must already have ruby and necessary gems installed on your computer
 
 **To get this project set up on your local machine, follow these simple steps:**
 
@@ -23,8 +23,11 @@ To get this project up and running locally, you must already have postgresql, ru
 5. Run ```bundle install``` to get the necesary gems.
 6. Run `rails db:create`.
 6. Run `rails db:migrate`.
-7. Run `rails s`
+7. Run `rails server`
 
+## Live Demo
+
+[Live Demo Link](https://protected-caverns-58695.herokuapp.com/users/sign_in/)
 
 ## Author Details::
 
