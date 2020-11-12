@@ -25,6 +25,10 @@ To get this project up and running locally, you must already have ruby and neces
 6. Run `rails db:migrate`.
 7. Run `rails server`
 
+## Live Demo
+
+[Live Demo Link](https://protected-caverns-58695.herokuapp.com/users/sign_in/)
+
 ## Author Details::
 
 👤 **Lamia Sristy**
