@@ -1,5 +1,5 @@
 # Project :  social media
-In this project we practiced building associations between models.
+In this project we practiced building associations between models. And we practiced active record queries. 
 
 ## Build-With
 
