@@ -23,7 +23,7 @@ To get this project up and running locally, you must already have ruby and neces
 5. Run ```bundle install``` to get the necesary gems.
 6. Run `rails db:create`.
 6. Run `rails db:migrate`.
-7. Run `rails s`
+7. Run `rails server`
 
 ## Live Demo
 
