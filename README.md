@@ -1,5 +1,9 @@
 # Project :  social media
-In this project we practiced building associations between models.
+In this project we practiced building associations between models. We have practiced active record queries as well as deployed the project on heroku.
+
+## Live Demo
+
+[Live Demo Link](https://protected-caverns-58695.herokuapp.com/users/sign_in/)
 
 ## Build-With
 
@@ -24,6 +28,7 @@ To get this project up and running locally, you must already have ruby and neces
 6. Run `rails db:create`.
 6. Run `rails db:migrate`.
 7. Run `rails server`
+
 
 ## Author Details::
 
